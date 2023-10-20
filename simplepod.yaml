@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testlambdapod
+  labels:
+    owner: awslambda
+spec:
+  containers:
+    - name: testlambdapod
+      command:
+        - /bin/sh
+        - '-c'
+        - >-
+          while true; do sleep 100; done
+      image: busybox:latest
